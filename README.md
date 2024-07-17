@@ -38,9 +38,9 @@ Before run any cluster experiment I normalize my dataset using two different app
 
 After these transformations I decided to use PCA *(Principal Component Analysis)* to reduce the dimensionallity of the dataset, preserving 98.7% of the real variance of the dataset. But before it, I removed some redundant variables from dataset manually using Pearson Correlation among all numerical continues variables *(most of the variables in dataset)*.
 
-The PCA could reduce the dimensionallity of both datasets *(the datasets scaled with std and log scaler)* from 18 variables to 3~5 components. It reduces the complexity of the dataset and reduce the training stage.
+The PCA could reduce the dimensionality of both datasets *(the datasets scaled with std and log scaler)* from 18 variables to 3~5 components. It reduces the complexity of the dataset and reduce the training stage.
 
-The cluster algorithm used to try to solve this problem was `KMeans`. It computes the euclidian distance between each point in dataset and all N centroids *(number of clusters to group the data)* and classify the data to the closest centroid. After this process, the centroids are re-computed *(the mean of the data distribution of the clustered points)*, and then, this process occours again. To evaluate the best model I used the `silhouette score` and `davies_bouldin_score`, both metrics are used when the real label of clusters are unknown.
+The cluster algorithm used to try to solve this problem was `KMeans`. It computes the euclidian distance between each point in dataset and all N centroids *(number of clusters to group the data)* and classify the data to the closest centroid. After this process, the centroids are re-computed *(the mean of the data distribution of the clustered points)*, and then, this process occours again. To evaluate the best model I used the `silhouette score` and `davies bouldin score`, both metrics are used when the real label of clusters are unknown.
 
 ### Silhouette score
 It is defined for each sample:
@@ -72,5 +72,7 @@ Where:
 
 <img src="/figures/std_scaler_model.png">
 <img src="/figures/log_scaler_model.png">
+
+Based on these graphs I used the cluster of number 4 which has a high `silhouoete score` and a low `davies bouldin score`. I decided to use the dataset scaled with the **Standard Scaler** because it had a dimensionality lower than the **Log Scaler** after PCA. 
 
 ## Cluster
