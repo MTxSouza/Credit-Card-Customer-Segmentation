@@ -1,5 +1,4 @@
-<img src="/figures/segmentation.png">
-The sample dataset summarizes the usage behavior of about 9000 active credit card holders during the last 6 months. The file is at a customer level with 18 behavioral variables.
+#### The sample dataset summarizes the usage behavior of about 9000 active credit card holders during the last 6 months. The file is at a customer level with 18 behavioral variables.
 
 ## Columns
 |Column name|description|
@@ -76,3 +75,4 @@ Where:
 Based on these graphs I used the cluster of number 4 which has a high `silhouoete score` and a low `davies bouldin score`. I decided to use the dataset scaled with the **Standard Scaler** because it had a dimensionality lower than the **Log Scaler** after PCA. 
 
 ## Cluster
+<img src="/figures/segmentation.png">
