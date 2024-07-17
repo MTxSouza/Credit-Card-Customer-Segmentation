@@ -53,6 +53,8 @@ Where:
 - $a$: Mean distance of a sample and all other points from the same cluster.
 - $b$: Mean distance of a sample and all other points from a different cluster.
 
+> Its value ranges from -1 to 1. Where 1 means that clusters are clearly distinguished, 0 means the distance between clusters is not significant and -1 means wrong clusters.
+
 ### Davies Bouldin score
 $$
 R_{ij}={{s_i + s_j} \over d_{ij}}
@@ -65,3 +67,10 @@ $$
 Where:
 - $s_i$: Average distance between each point cluster $i$ and the centroid of that cluster.
 - $d_{ij}$: Distance between cluster centroids $i$ and $j$.
+
+> It is defined as a ratio between the cluster scatter and the cluster's separation and a lower value will mean that the clustering is better.
+
+<img src="/figures/std_scaler_model.png">
+<img src="/figures/log_scaler_model.png">
+
+## Cluster
